@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<title>Machine Learning Lab Experiment Deployment</title>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
+<style>
+
+h1 {text-align: center;}
+h2 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+
+<body>
+ 
+     
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+<center><p style="font-size:40px;color:white;margin-top:10px;">Summer Internship 2022</p></center> 
+<center><p style="font-size:30px;color:white;margin-top:10px;">Department of Computer Engineering</p></center> 
+<center><p style="font-size:25px;color:white;margin-top:10px;">Air Pollution Forecasting</p></center> 
+</div>
+</div>
+</div>
+
+<div class="login">
+<h2 >Air Pollution Forecasting</h2>
+<h4>Made by Yograj Sharma</h4>
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="get">
+<div class="form-floating mb-3">
+
+<input type="number" class="form-control" id="ten" name="pollution" step="any" min="1"  placeholder="0" required="required">
+<label for="floatingInput">Pollution</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="tw" name="dew" step="any" min="0"  placeholder="0" required="required">
+<label for="floatingInput">dew</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="bt" name="temp" step="any" min="0"  placeholder="0" required="required">
+<label for="floatingInput">temp</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="seven" name="pressure" step="any" min="0"  placeholder="0" required="required">
+<label for="floatingInput">pressure</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="six" name="w_dir" step="any" min="0"  placeholder="0" required="required">
+<label for="floatingInput">w_dir</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="five" name="w_speed" step="any" min="0"  placeholder="0" required="required">
+<label for="floatingInput">w_speed</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="final" name="snow" step="any" min="0"  placeholder="0" required="required">
+<label for="floatingInput">snow</label>
+</div>
+<br>
+<div class="form-floating mb-3">
+<input type="number" class="form-control" id="medium" name="rain" step="any" min="1"  placeholder="0" required="required">
+<label for="floatingInput">rain</label>
+</div>
+<br>
+
+<br>
+<button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+<br>
+<br>
+{{ prediction_text }}
+
+</div>
+
+<div class="" style="background-color:blue;" >
+<div class="clearfix">
+           
+<div class="col-md-12">
+ <center><p style="font-size:25px;color:white;margin-top:20px;">Summer internship final project</p></center> 
+</div>
+</div>
+</div>
+</body>
+</html>
